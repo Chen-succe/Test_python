@@ -1,0 +1,21 @@
+file = open('my.txt', 'w')
+file.write('我先写入这段内容,')
+file.close()
+
+
+file1 = open('my.txt', 'a+')
+count = file1.tell()
+# print(count)
+# print(type(count))  # <class 'int'>
+file1.seek(0)
+content_before = file1.read()
+print('<原先文本中的内容>：{0}'.format(content_before))
+file1.seek(count)
+file1.write('我又写入一部分.')
+file1.seek(count)
+content_new = file1.read()
+print('<新写入的内容>：{}'.format(content_new))
+file1.seek(0)
+content_now = file1.read()
+print('<现在文本的内容>：{}'.format(content_now))
+file1.close()
