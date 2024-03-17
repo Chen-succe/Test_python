@@ -272,8 +272,16 @@ def sort():
     # reverse上面也已经交代了，asc_or_desc_bool参数，False表示升序，True表示降序
     # key是排序项，这里使用匿名函数lambda，这里自己课外是补充这个知识，很好理解。
     # 获取参数x中的['English']某个键，将其转化成int，再赋给x，key就可以按照第几个位置进行排序。
+    # if mode == '1':
+    #     student_new.sort(key=lambda x: int(x['English']), reverse=asc_or_desc_bool)
+    # elif mode == '2':
+    #     student_new.sort(key=lambda x: int(x['python']), reverse=asc_or_desc_bool)
+    # elif mode == '3':
+    #     student_new.sort(key=lambda x: int(x['java']), reverse=asc_or_desc_bool)
+    # elif mode == '0':
+    #     student_new.sort(key=lambda x: int(x['English'] + x['python'] + x['java']), reverse=asc_or_desc_bool)
     if mode == '1':
-        student_new.sort(key=lambda x: int(x['English']), reverse=asc_or_desc_bool)
+        student_new.sort(key=sort_a, reverse=asc_or_desc_bool)
     elif mode == '2':
         student_new.sort(key=lambda x: int(x['python']), reverse=asc_or_desc_bool)
     elif mode == '3':
@@ -285,6 +293,11 @@ def sort():
         sort()
     # 上面这些都完成，则将排序好的学生信息，进行展示
     show_student(student_new)
+
+
+def sort_a(x):
+    # 例如传入student_new['English']
+    return int(x['English'])
 
 
 def total():
