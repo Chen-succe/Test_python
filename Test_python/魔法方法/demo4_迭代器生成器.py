@@ -6,8 +6,8 @@ class A:
         self.stu_list = stu_list
         self.count = 0
 
-    def __iter__(self):
-        return self
+    # def __iter__(self):
+    #     return self
 
     def __next__(self):
         if self.count <= len(self.stu_list) - 1:
@@ -18,12 +18,13 @@ class A:
             # return  修改为下面语句
             raise StopIteration
 
-    def __getitem__(self, item):
-        return self.stu_list[item]
+    # def __getitem__(self, item):
+    #     return self.stu_list[item]
 
 
 a = A(['a', 'b', 'c'])
 # a = iter(a)
+a = next(a)
 
 print(isinstance(a, Iterator))  # True
 print(isinstance(a, Iterable))  # True
