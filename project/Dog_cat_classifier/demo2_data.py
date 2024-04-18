@@ -69,4 +69,4 @@ class cat_and_dog(Dataset):
 
 if __name__ == '__main__':
     path = r'E:\自制数据集\猫狗_test'
-    path = r''
+    # path = r''
