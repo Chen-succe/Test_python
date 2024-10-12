@@ -1,0 +1,18 @@
+[project]
+name = "chenchenjiang_flow"
+version = "0.0.1"
+authors = [
+  { name="ChenChen Jiang", email="482049605@qq.com" },
+]
+description = "This is mini deep learning framework"
+readme = "README.md"
+requires-python = ">=3.6"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/pypa/sampleproject"
+Issues = "https://github.com/pypa/sampleproject/issues"
